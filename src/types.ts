@@ -10,6 +10,10 @@ export interface PipelineInput {
   title: string;
   /** 仕様書作成のためのプロンプト */
   specPrompt: string;
+  /** ソースURL（Input Warehouseとの連携用・オプション） */
+  sourceUrl?: string;
+  /** ソースタイトル（Input Warehouseとの連携用・オプション） */
+  sourceTitle?: string;
 }
 
 /**
@@ -18,14 +22,12 @@ export interface PipelineInput {
 export interface PipelineResult {
   /** タスクのタイトル */
   title: string;
-  /** Claude による仕様書 */
-  spec: string;
-  /** ChatGPT による設計書 */
-  design: string;
-  /** Perplexity による調査結果 */
-  research: string;
   /** Notion ページID */
   notionPageId: string;
+  /** ソースがリンクされたか */
+  sourceLinked: boolean;
+  /** 成功フラグ */
+  success: boolean;
 }
 
 /**
@@ -40,6 +42,10 @@ export interface NotionTaskData {
   design: string;
   /** Perplexity による調査結果 */
   research: string;
+  /** ソースURL（Input Warehouseとの連携用・オプション） */
+  sourceUrl?: string;
+  /** ソースタイトル（Input Warehouseとの連携用・オプション） */
+  sourceTitle?: string;
 }
 
 /**
