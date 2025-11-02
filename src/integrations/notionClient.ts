@@ -2,7 +2,7 @@ import { Client } from "@notionhq/client";
 
 const notionTokens = JSON.parse(process.env.NOTION_TOKENS_JSON!);
 const taskDbId = process.env.NOTION_TASK_DB_ID!;
-const inputDbId = process.env.NOTION_INPUT_DB_ID!;
+const inputDbId = process.env.NOTION_DB_ID_INPUT_WAREHOUSE!;
 
 /**
  * Input WarehouseにURLが存在するか検索

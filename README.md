@@ -51,7 +51,7 @@ OPENAI_API_KEY=sk-...
 ANTHROPIC_API_KEY=sk-ant-...
 PERPLEXITY_API_KEY=sk-pplx-...
 NOTION_TASK_DB_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-NOTION_INPUT_DB_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# NOTION_DB_ID_INPUT_WAREHOUSE is defined in ~/.zshenv
 NOTION_TOKENS_JSON={"claude":"secret_xxx","chatgpt":"secret_yyy","perplexity":"secret_zzz"}
 ```
 
@@ -149,7 +149,7 @@ func azure functionapp publish ai-pipeline-func
 | `ANTHROPIC_API_KEY` | Anthropic (Claude) のAPIキー |
 | `PERPLEXITY_API_KEY` | Perplexity のAPIキー（オプション） |
 | `NOTION_TASK_DB_ID` | Notion のタスクデータベースID |
-| `NOTION_INPUT_DB_ID` | Notion のInput WarehouseデータベースID |
+| `NOTION_DB_ID_INPUT_WAREHOUSE` | Notion のInput WarehouseデータベースID（`~/.zshenv`で定義） |
 | `NOTION_TOKENS_JSON` | Notion統合トークン（JSON形式） |
 
 ## 🔗 Input Warehouse連携機能
